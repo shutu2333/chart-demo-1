@@ -1,0 +1,41 @@
+@import "../../../ui/theme/base";
+
+.flexCenter {
+    height: 100vh;
+}
+
+.resetCard {
+    margin-bottom: 0;
+    background-color: $background-accent;
+    width: 100%;
+    max-width: 250px;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.inputLabel {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.show {
+    opacity: 1;
+    padding-top: 10px;
+    transition: all 0.5s ease;
+}
+
+
+.textCenter {
+    text-align: center;
+}
+
+.buttonWidth {
+    margin-left: -20px;
+    width: 270px;
+}
+
+.logoFaethm {
+    margin: 10px auto;
+    margin-bottom: 40px;
+    width: 120px;
+}

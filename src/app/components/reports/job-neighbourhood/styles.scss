@@ -1,0 +1,22 @@
+@import "../../../../ui/theme/colors";
+
+.point {
+    stroke: $primary-color;
+
+    stroke-width: 0;
+
+    &:hover {
+        cursor: none;
+    }
+}
+
+.withOurs {
+    .ours {
+        stroke-width: 2;
+    }
+}
+
+
+.tooltip {
+    cursor: none;
+}

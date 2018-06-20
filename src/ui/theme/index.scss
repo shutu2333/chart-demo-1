@@ -1,0 +1,30 @@
+@import "fonts";
+
+html :global {
+    @import "~normalize.css/normalize";
+    @import "base";
+
+    // Import files in the same order that they are documented in the docs
+    @import "~@blueprintjs/core/src/common/resets";
+    
+    @import "~@blueprintjs/icons/src/font-imports";
+    @import "~@blueprintjs/icons/src/icons";
+
+    @import "~@blueprintjs/core/src/typography";
+    @import "~@blueprintjs/core/src/accessibility";
+
+    // We import the comonents as needed in each ensemble component.
+    @import "~@blueprintjs/core/src/components/index";
+
+    @import "~react-select/dist/react-select";
+    @import 'select';
+    @import 'slider';
+
+    .pt-button {
+        box-shadow: none !important;
+        font-family: $pt-font-family;
+        font-weight: 400;
+        font-size: 0.95em;
+        transition: all .2s ease;
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "total": 1,
+    "limit": 50,
+    "skip": 0,
+    "data": [
+        {
+            "id": 1,
+            "name": "Faethm",
+            "slug": "faethm",
+            "region": "sydney",
+            "type": "umbrella",
+            "country": "AU",
+            "industry": "Professional, Scientific & Technical Services",
+            "registrationType": "fcode",
+            "registrationNumber": "101",
+            "domainName": "faethm.ai",
+            "parentId": null,
+            "membershipType": 10
+        }
+    ]
+}

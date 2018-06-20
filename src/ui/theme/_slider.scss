@@ -1,0 +1,29 @@
+@import 'colors';
+
+.pt-slider-progress {
+  background: $primary-color !important;
+  border-radius: 6px;
+}
+
+.pt-slider-track {
+  border-radius: 6px;
+}
+
+// .pt-slider-label {
+//   // display: none;
+//   box-shadow: none !important;
+//   background: transparent !important;
+// }
+
+.pt-slider-label {
+  display: none;
+}
+
+.pt-slider-axis .pt-slider-label {
+  display: block;
+}
+
+.pt-slider-handle {
+  background: $lighter-gray !important;
+  width: 10px !important;
+}

@@ -1,0 +1,52 @@
+@import "../../../ui/theme/colors";
+
+:export { primaryColor: $primary-color; }
+:export { white: $white; }
+:export { lighterGray: $lighter-gray; }
+
+.table {
+    border-bottom: 1px solid rgba($lighter-gray, 0.5);
+
+    & > h5, & > div {
+        width: 30%;
+        padding: 10px;
+
+        &:first-of-type {
+            width: 10%;
+        }
+
+        &:last-of-type {
+            width: 20%;
+        }
+    }
+}
+
+.action {
+    white-space: nowrap;
+
+    &:hover .viewReportIcon {
+        animation: slideInLeft 0.7s infinite;
+    }
+}
+
+.processing {
+    color: $lighter-gray;
+}
+
+.viewReportIcon {
+    position: absolute;
+    margin-top: -4px;
+    margin-left: 10px;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translate3d(-50%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(30%, 0, 0);
+    }
+}
+

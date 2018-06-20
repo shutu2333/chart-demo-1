@@ -1,0 +1,60 @@
+@import "../../../../ui/theme/colors";
+
+.highlightedOptions {
+    color: $primary-color !important;
+    // font-weight: 400 !important;
+}
+
+.selected {
+    font-weight: 400 !important;
+}
+
+.onlyCompanyJobsButton {
+    // margin-top: -45px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: right;
+}
+
+.list {
+    height: 150px;
+    overflow: auto;
+
+    a:hover {
+        color: $primary-color;
+    }
+}
+
+.listPanel {
+    width: 48%;
+
+    h4 {
+        margin-top: 30px;
+    }
+}
+
+.fromToArrow {
+    margin-left: 10px;
+}
+
+.legendClass {
+    :global .pt-tab-panel {
+        text-align: center;
+    }
+}
+
+.searchInput {
+    background: $lighter-gray !important;
+}
+
+.optionName {
+    align-self: flex-start;
+    overflow: hidden;
+    padding-right: 4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.impactValue {
+    align-self: flex-end;
+}

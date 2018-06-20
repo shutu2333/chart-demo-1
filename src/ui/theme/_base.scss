@@ -1,0 +1,239 @@
+$icon-font-path: "@blueprintjs/core/resources/icons";
+
+$output-bourbon-deprecation-warnings: false;
+
+@import "~@blueprintjs/core/src/common/mixins";
+@import "~@blueprintjs/core/src/common/colors";
+@import 'colors';
+
+// Copyright 2015 Palantir Technologies, Inc. All rights reserved.
+// Licensed under the BSD-3 License as modified (the “License”); you may obtain a copy
+// of the license at https://github.com/palantir/blueprint/blob/master/LICENSE
+// and https://github.com/palantir/blueprint/blob/master/PATENTS
+
+$button-gradient: none;
+
+// easily the most important variable, so it comes first
+// (so other variables can use it to define themselves)
+$pt-grid-size: 10px !default;
+
+// see https://bitsofco.de/the-new-system-font-stack/
+$pt-font-family: "Foundry Sterling",
+                 -apple-system,
+                 "BlinkMacSystemFont",
+                 "Segoe UI",
+                 "Roboto",
+                 "Oxygen",
+                 "Ubuntu",
+                 "Cantarell",
+                 "Open Sans",
+                 "Helvetica Neue",
+                 "Icons16", // support inline Palantir icons
+                 sans-serif !default;
+
+$pt-font-family-monospace: monospace !default;
+
+$pt-font-size: $pt-grid-size * 1.4 !default;
+$pt-font-size-large: $pt-grid-size * 1.6 !default;
+$pt-font-size-small: $pt-grid-size * 1.2 !default;
+
+// a little bit extra to ensure the height comes out to just over 18px (and browser rounds to 18px)
+// $pt-line-height: ($pt-grid-size * 1.8) / $pt-font-size + 0.0001 !default;
+$pt-line-height: ($pt-grid-size * 2.2) / $pt-font-size + 0.0001 !default;
+
+// Colors
+$pt-text-color: $white;
+$input-color: $black;
+// $pt-text-color-muted: $gray1;
+// $pt-text-color-disabled: rgba($pt-text-color-muted, 0.5);
+$pt-heading-color: $lighter-gray;
+$pt-link-color: $primary-color;
+// $pt-dark-text-color: $light-gray5;
+// $pt-dark-text-color-muted: $gray5;
+// $pt-dark-text-color-disabled: rgba($pt-dark-text-color-muted, 0.5);
+$pt-dark-heading-color: $lighter-gray;
+$pt-dark-link-color: $primary-color;
+// // Default text selection color using #7dbcff
+// $pt-text-selection-color: rgba(125, 188, 255, 0.6);
+
+// Icon variables
+
+$icons16-family: "Icons16" !default;
+$icons20-family: "Icons20" !default;
+
+$pt-icon-size-standard: 16px !default;
+$pt-icon-size-large: 20px !default;
+
+// Grids & dimensions
+
+$pt-border-radius: 0;
+
+// Buttons
+$pt-button-height: $pt-grid-size * 3 !default;
+$pt-button-height-small: $pt-grid-size * 2.4 !default;
+$pt-button-height-large: $pt-grid-size * 4 !default;
+
+// $button-color-disabled: $pt-text-color-disabled !default;
+$button-background-color: $primary-color;
+$button-background-color-hover: $light-orange;
+$button-background-color-active: $light-orange;
+// $button-background-color-disabled: rgba($light-gray1, 0.5) !default;
+// $button-background-color-active-disabled: rgba($light-gray1, 0.7) !default;
+// $button-intent-color-disabled: rgba($white, 0.6);
+// $dark-button-color-disabled: $pt-dark-text-color-disabled !default;
+// $dark-button-background-color: $dark-gray5 !default;
+// $dark-button-background-color-hover: $dark-gray4 !default;
+// $dark-button-background-color-active: $dark-gray2 !default;
+// $dark-button-background-color-disabled: rgba($dark-gray5, 0.5) !default;
+// $dark-button-background-color-active-disabled: rgba($dark-gray5, 0.7) !default;
+// $dark-button-intent-color-disabled: rgba($white, 0.3);
+
+// Progress bars
+$progress-bar-stripes-color: rgba($white, 0.60);
+
+// $progress-bar-height: round($pt-grid-size * 0.8) !default;
+// $progress-bar-stripes-size: 100%;
+$progress-bar-stripes-size: 200%;
+// $progress-bar-border-radius: $pt-grid-size * 4 !default;
+
+// $progress-track-color: $primary-color;
+// $progress-head-color: rgba($gray1, 0.8) !default;
+$dark-progress-track-color: $dark-gray;
+$dark-progress-head-color: $primary-color;
+
+$progress-bar-gradient: linear-gradient(
+  -90deg,
+  transparent 0%,
+  transparent 48%,
+  $progress-bar-stripes-color 50%,
+  transparent 52%,
+  transparent 99%
+);
+
+// Inputs
+$pt-input-height: $pt-grid-size * 4 !default;
+$pt-input-height-large: $pt-grid-size * 4 !default;
+
+// Others
+$pt-navbar-height: $pt-grid-size * 5 !default;
+
+// Z-indices
+$pt-z-index-base: 0 !default;
+// $pt-z-index-content: $pt-z-index-base + 10 !default;
+// $pt-z-index-overlay: $pt-z-index-content + 10 !default;
+$pt-z-index-content: $pt-z-index-base + 1 !default;
+$pt-z-index-overlay: $pt-z-index-content + 1 !default;
+
+// Shadow opacities
+$pt-border-shadow-opacity: 0.1 !default;
+$pt-drop-shadow-opacity: 0.2 !default;
+$pt-dark-border-shadow-opacity: $pt-border-shadow-opacity * 2 !default;
+$pt-dark-drop-shadow-opacity: $pt-drop-shadow-opacity * 2 !default;
+
+// Elevations
+// all shadow lists must be the same length to avoid flicker in transitions.
+$pt-elevation-shadow-0: 0 0 0 1px $pt-divider-black,
+                        0 0 0 rgba($black, 0),
+                        0 0 0 rgba($black, 0) !default;
+$pt-elevation-shadow-1: border-shadow($pt-border-shadow-opacity),
+                        0 0 0 rgba($black, 0),
+                        0 1px 1px rgba($black, $pt-drop-shadow-opacity) !default;
+$pt-elevation-shadow-2: border-shadow($pt-border-shadow-opacity),
+                        0 1px 1px rgba($black, $pt-drop-shadow-opacity),
+                        0 2px 6px rgba($black, $pt-drop-shadow-opacity) !default;
+$pt-elevation-shadow-3: border-shadow($pt-border-shadow-opacity),
+                        0 2px 4px rgba($black, $pt-drop-shadow-opacity),
+                        0 8px 24px rgba($black, $pt-drop-shadow-opacity) !default;
+$pt-elevation-shadow-4: border-shadow($pt-border-shadow-opacity),
+                        0 4px 8px rgba($black, $pt-drop-shadow-opacity),
+                        0 18px 46px 6px rgba($black, $pt-drop-shadow-opacity) !default;
+
+$pt-dark-elevation-shadow-0: 0 0 0 1px $pt-dark-divider-black,
+                             0 0 0 rgba($black, 0),
+                             0 0 0 rgba($black, 0) !default;
+$pt-dark-elevation-shadow-1: border-shadow($pt-dark-border-shadow-opacity),
+                             0 0 0 rgba($black, 0),
+                             0 1px 1px rgba($black, $pt-dark-drop-shadow-opacity) !default;
+$pt-dark-elevation-shadow-2: border-shadow($pt-dark-border-shadow-opacity),
+                             0 1px 1px rgba($black, $pt-dark-drop-shadow-opacity),
+                             0 2px 6px rgba($black, $pt-dark-drop-shadow-opacity) !default;
+$pt-dark-elevation-shadow-3: border-shadow($pt-dark-border-shadow-opacity),
+                             0 2px 4px rgba($black, $pt-dark-drop-shadow-opacity),
+                             0 8px 24px rgba($black, $pt-dark-drop-shadow-opacity) !default;
+$pt-dark-elevation-shadow-4: border-shadow($pt-dark-border-shadow-opacity),
+                             0 4px 8px rgba($black, $pt-dark-drop-shadow-opacity),
+                             0 18px 46px 6px rgba($black, $pt-dark-drop-shadow-opacity) !default;
+
+// Transitions
+$pt-transition-ease: cubic-bezier(0.4, 1, 0.75, 0.9) !default;
+$pt-transition-ease-bounce: cubic-bezier(0.54, 1.12, 0.38, 1.11) !default;
+// $pt-transition-duration: 100ms !default;
+$pt-transition-duration: 200ms;
+
+// Light theme styles
+
+$pt-input-box-shadow: inset border-shadow(0.15),
+                      inset 0 1px 1px rgba($black, $pt-drop-shadow-opacity) !default;
+
+$pt-dialog-box-shadow: $pt-elevation-shadow-4 !default;
+$pt-popover-box-shadow: $pt-elevation-shadow-3 !default;
+$pt-tooltip-box-shadow: $pt-popover-box-shadow !default;
+
+$dark-popover-background-color: $lighter-gray;
+
+// Dark theme styles
+
+$pt-dark-input-box-shadow: inset border-shadow(0.3),
+                           inset 0 1px 1px rgba($black, $pt-dark-drop-shadow-opacity) !default;
+
+$pt-dark-dialog-box-shadow: $pt-dark-elevation-shadow-4 !default;
+$pt-dark-popover-box-shadow: $pt-dark-elevation-shadow-3 !default;
+$pt-dark-tooltip-box-shadow: $pt-dark-popover-box-shadow !default;
+
+// Color aliases
+
+// $pt-intent-primary: $blue3 !default;
+// $pt-intent-success: $green3 !default;
+// $pt-intent-warning: $orange3 !default;
+// $pt-intent-danger: $red3 !default;
+
+// $pt-app-background-color: $light-gray5 !default;
+// $pt-dark-app-background-color: $dark-gray3 !default;
+
+// $pt-text-color: $dark-gray1 !default;
+// $pt-text-color-muted: $gray1 !default;
+// $pt-text-color-disabled: rgba($pt-text-color-muted, 0.5) !default;
+// $pt-heading-color: $pt-text-color !default;
+// $pt-link-color: $blue2 !default;
+// $pt-dark-text-color: $light-gray5 !default;
+// $pt-dark-text-color-muted: $gray5 !default;
+// $pt-dark-text-color-disabled: rgba($pt-dark-text-color-muted, 0.5) !default;
+// $pt-dark-heading-color: $pt-dark-text-color !default;
+// $pt-dark-link-color: $blue5 !default;
+// // Default text selection color using #7dbcff
+// $pt-text-selection-color: rgba(125, 188, 255, 0.6) !default;
+
+// $pt-icon-color: $pt-text-color-muted !default;
+// $pt-icon-color-hover: $pt-text-color !default;
+// $pt-icon-color-disabled: $pt-text-color-disabled !default;
+// $pt-icon-color-selected: $pt-intent-primary !default;
+// $pt-dark-icon-color: $pt-dark-text-color-muted !default;
+// $pt-dark-icon-color-hover: $pt-dark-text-color !default;
+// $pt-dark-icon-color-disabled: $pt-dark-text-color-disabled !default;
+// $pt-dark-icon-color-selected: $pt-intent-primary !default;
+
+// $pt-divider-black: rgba($black, 0.15) !default;
+// $pt-dark-divider-black: rgba($black, 0.4) !default;
+$pt-dark-divider-white: rgba($lighter-gray, 0.3);
+
+// $pt-code-text-color: $pt-text-color-muted !default;
+// $pt-dark-code-text-color: $pt-dark-text-color-muted !default;
+// $pt-code-background-color: rgba($white, 0.7) !default;
+// $pt-dark-code-background-color: rgba($black, 0.3) !default;
+
+// Menu
+$menu-item-color-hover: transparent;
+$menu-item-color-active: transparent;
+$dark-menu-item-color-hover: transparent;
+$dark-menu-item-color-active: transparent;
+

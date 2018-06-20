@@ -1,0 +1,62 @@
+@import "../../../ui/theme/base.scss";
+
+.flexCenter {
+    height: 100vh;
+}
+
+.loginCard {
+    margin-bottom: 0;
+    background-color: $background-accent;
+    width: 100%;
+    max-width: 250px;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.inputLabel {
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.showClassName {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+.align-left {
+    float: left;
+}
+
+.align-right {
+    float: right;
+}
+
+.align-center {
+    margin: 0 auto;
+    width: 250px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.buttonWidth {
+    margin-left: -20px;
+    width: 270px;
+}
+
+.whiteColor {
+    color: white;
+}
+
+.logoLogin {
+    margin: 10px auto;
+    width: 120px;
+}

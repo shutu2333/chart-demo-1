@@ -1,0 +1,98 @@
+@import "../layout/variables";
+@import "../../../ui/theme/colors";
+
+$padding: 1rem;
+
+.portal {
+    position: relative;
+    width: calc(100% - (#{$padding * 2} + #{$collapsedSize}));
+    padding-bottom: 60px;
+    padding-left: calc(#{$padding} + #{$collapsedSize});
+
+    &:global.with-filter {
+        width: calc(100% - (#{$padding * 2} + #{$collapsedSize * 2}));
+    }
+
+    &:global.blur {
+        filter: blur(20px)
+    }
+
+    & > div {
+        // @media (min-width: 2000px) {
+        //   max-width: 1600px;
+        // }
+        margin: 0 auto;
+        max-width: 1024px;
+        // min-height: 100vh;
+    }
+}
+
+.loadingOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    & > svg {
+        animation: spin 0.5s infinite linear;
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform:rotate(360deg)
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+.organizationPrompt {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    & > div {
+        margin-top: -10vh;
+        border: 20px solid $background-accent-dark;
+        background: $background-accent-dark;
+        width: 300px;
+        max-height: 300px;
+        overflow-y: auto;
+        padding: 50px 20px 60px 20px;
+        text-align: center;
+        animation: zoomIn 0.2s ease;
+
+        h2 {
+            margin-bottom: 30px;
+            color: $white;
+        }
+
+        div {
+            width: 100%;
+        }
+
+        button {
+            margin-top: 10px;
+            border-radius: 6px;
+            padding-right: 0;
+            padding-left: 0;
+            text-transform: uppercase;
+        }
+    }
+}

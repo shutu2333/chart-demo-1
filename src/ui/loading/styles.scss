@@ -1,0 +1,19 @@
+.loading {
+  padding: 0.1rem;
+  background-color: #FFF;
+  box-shadow: 1px 1px 3px 0px $md-grey-500;
+
+  &:hover {
+    box-shadow: 1px 1px 6px 1px $md-grey-500;
+  }
+}
+
+.loading-full {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.5);
+}

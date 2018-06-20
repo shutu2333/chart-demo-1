@@ -1,0 +1,82 @@
+@import "../../layout/variables";
+@import "../../../../ui/theme/colors";
+
+
+.header {
+    padding: 10% 2% 2% 2%;
+}
+
+.addUser {
+    height: 1.5em;
+}
+
+.list {
+    min-width: 550px;
+    padding: 2%;
+}
+
+.listHeader {
+    background: $deep-dark-gray;
+    color: $primary-color;
+    font-weight: 300;
+}
+
+
+.listItem {
+    background: $background-accent;
+}
+
+.listItem:nth-child(odd) {
+    background: $background-accent-dark;
+}
+
+.listHeader div,
+.listItem div {
+    border: 1px solid $background-accent;
+    min-width: 65px;
+    overflow: hidden;
+    padding: 20px 10px;
+    word-break: break-all;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.prompt {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.8);
+
+    > div {
+        margin-top: -10vh;
+        background: $background-accent-dark;
+        width: 300px;
+        overflow-y: auto;
+        animation: zoomIn 0.2s ease;
+
+        > div {
+            padding: 20px;
+
+            h2 {
+                color: $primary-color;
+            }
+        }
+    }
+
+    button {
+        margin-top: 10px;
+        width: 280px;
+    }
+}
